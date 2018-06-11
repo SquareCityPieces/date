@@ -19,23 +19,19 @@ print "Press CTRL+Z to exit"
 while(True):
   now = datetime.datetime.now()
   month = now.month
-  day = now.day
-  hour = now.hour
-  minute = now.minute
-  second = now.second
-  
+  day = now.day  
 
   segment.clear()
-  # Set month
-  segment.set_digit(0, int(month / 10))     # Tens
-  segment.set_digit(1, month % 10)          # Ones
   # Set day
-  segment.set_digit(2, int(day / 10))   # Tens
-  segment.set_digit(3, day % 10)        # Ones
+  segment.set_digit(0, int(day / 10))     # Tens
+  segment.set_digit(1, day % 10)          # Ones
+  # Set month
+  segment.set_digit(2, int(month / 10))   # Tens
+  segment.set_digit(3, month % 10)        # Ones
   
-  # Write the display buffer to the hardware.  This must be called to
+  # Write the display buffer to the hardware. This must be called to
   # update the actual display LEDs.
   segment.write_display()
 
   # Wait a quarter second (less than 1 second to prevent colon blinking getting$
-  time.sleep(0.25)
+  time.sleep(1.00)
