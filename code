@@ -28,10 +28,10 @@ while(True):
   segment.clear()
   # Set month
   segment.set_digit(0, int(month / 10))     # Tens
-  segment.set_digit(1, month % 10)          # Ones
+  segment.set_digit(1., month % 10)          # Ones
   # Set day
   segment.set_digit(2, int(day / 10))   # Tens
-  segment.set_digit(3, day % 10)        # Ones
+  segment.set_digit(3., day % 10)        # Ones
   
   # Write the display buffer to the hardware.  This must be called to
   # update the actual display LEDs.
