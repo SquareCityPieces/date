@@ -1,3 +1,4 @@
-# date
-python date for 7-seg-display
-thre are no dots behind day and month
+# DATE
+show the date on a raspberry pi with a 4-digit 7-segment led display
+
+problme: there are no dots behind day and month
